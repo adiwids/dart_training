@@ -2,6 +2,8 @@
 
 Basic Dart programming language training source code.
 
+![Training Check](https://github.com/adiwids/dart_training/actions/workflows/main.yml/badge.svg)
+
 `$ dart --version`
 
 ```
@@ -16,5 +18,8 @@ Install test package.
 
 `$ dart pub add --dev test`
 
+Run test.
+
+`cd <dir> && dart pub get && dart test test/*Test.dart`
 
 

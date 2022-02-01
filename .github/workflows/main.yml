@@ -1,0 +1,18 @@
+name: Training Check
+on:
+  push:
+    branches: [master]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        sdk: [stable, beta]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: ${{matrix.sdk}}
+      - name: Class Inheritance Training
+        run: "cd klass && dart pub get && dart test test/*Test.dart && cd ../"
+
